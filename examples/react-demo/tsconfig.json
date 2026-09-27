@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "@kpro/core": ["../../packages/core/src/index.ts"],
+      "@kpro/react": ["../../packages/react/src/index.ts"]
+    }
+  },
+  "include": ["src"]
+}

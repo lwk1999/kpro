@@ -1,0 +1,35 @@
+{
+  "name": "@kpro/core",
+  "version": "0.1.0",
+  "description": "kpro 跨框架核心：与框架无关的指引引擎、挖孔遮罩几何、DOM 追踪与「不再提示」持久化",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "0.34.6",
+    "@types/node": "16.18.108",
+    "jsdom": "22.1.0",
+    "typescript": "5.3.3",
+    "vite": "4.5.5",
+    "vitest": "0.34.6"
+  }
+}

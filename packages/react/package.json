@@ -1,0 +1,49 @@
+{
+  "name": "@kpro/react",
+  "version": "0.1.0",
+  "description": "kpro 的 React 18 实现，首个组件为指引（Guide）",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@kpro/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "9.3.4",
+    "@testing-library/react": "14.3.1",
+    "@types/react": "18.2.79",
+    "@types/react-dom": "18.2.25",
+    "@vitejs/plugin-react": "4.3.4",
+    "@vitest/coverage-v8": "0.34.6",
+    "jsdom": "22.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.3.3",
+    "vite": "4.5.5",
+    "vite-plugin-dts": "3.9.1",
+    "vitest": "0.34.6"
+  }
+}

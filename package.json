@@ -1,0 +1,32 @@
+{
+  "name": "kpro",
+  "version": "0.1.0",
+  "private": true,
+  "description": "kpro — 一套代码同时支持 Vue 3 与 React 18 的跨框架 UI 组件库",
+  "packageManager": "pnpm@8.15.9",
+  "engines": {
+    "node": ">=16.14"
+  },
+  "scripts": {
+    "dev:vue": "pnpm --filter @kpro/vue-demo dev",
+    "dev:react": "pnpm --filter @kpro/react-demo dev",
+    "build": "pnpm --filter \"./packages/*\" -r build",
+    "build:examples": "pnpm --filter \"./examples/*\" -r build",
+    "test": "pnpm --filter \"./packages/*\" -r test",
+    "test:cov": "pnpm --filter \"./packages/*\" -r test:cov",
+    "lint": "eslint . --ext .ts,.tsx,.vue,.cjs",
+    "lint:fix": "eslint . --ext .ts,.tsx,.vue,.cjs --fix",
+    "typecheck": "pnpm --filter \"./packages/*\" -r typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "16.18.108",
+    "@typescript-eslint/eslint-plugin": "6.21.0",
+    "@typescript-eslint/parser": "6.21.0",
+    "eslint": "8.57.0",
+    "eslint-plugin-react": "7.34.4",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "eslint-plugin-vue": "9.28.0",
+    "typescript": "5.3.3",
+    "vue-eslint-parser": "9.4.3"
+  }
+}

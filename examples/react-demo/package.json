@@ -1,0 +1,26 @@
+{
+  "name": "@kpro/react-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "kpro 指引组件 React 18 演示页",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@kpro/core": "workspace:*",
+    "@kpro/react": "workspace:*",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.79",
+    "@types/react-dom": "18.2.25",
+    "@vitejs/plugin-react": "4.3.4",
+    "typescript": "5.3.3",
+    "vite": "4.5.5"
+  }
+}

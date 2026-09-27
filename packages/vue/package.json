@@ -1,0 +1,45 @@
+{
+  "name": "@kpro/vue",
+  "version": "0.1.0",
+  "description": "kpro 的 Vue 3 实现，首个组件为指引（Guide）",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@kpro/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "4.6.2",
+    "@vitest/coverage-v8": "0.34.6",
+    "@vue/test-utils": "2.4.6",
+    "jsdom": "22.1.0",
+    "typescript": "5.3.3",
+    "vite": "4.5.5",
+    "vite-plugin-dts": "3.9.1",
+    "vitest": "0.34.6",
+    "vue": "3.4.38",
+    "vue-tsc": "1.8.27"
+  }
+}
