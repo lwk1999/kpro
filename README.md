@@ -24,15 +24,17 @@ kpro 把组件行为下沉到与框架无关的内核 `@kpro/core`，Vue / React
 ```
 kpro/
 ├── packages/
-│   ├── core/            # @kpro/core  —— 框架无关内核
+│   ├── core/            # @kpro/core  —— 框架无关内核（按组件分组）
 │   │   └── src/
-│   │       ├── types.ts        # 跨框架公共契约（唯一事实来源）
-│   │       ├── engine.ts       # 步骤注册表与状态机
-│   │       ├── storage.ts      # 「不再提示」持久化
-│   │       ├── style.ts        # 共享 CSS 与注入
-│   │       └── dom/
-│   │           ├── cutout.ts   # 挖孔几何与浮层定位（纯函数）
-│   │           └── rect.ts     # DOM 矩形测量与变化追踪
+│   │       ├── index.ts        # 公共出口
+│   │       └── guide/          # 指引组件
+│   │           ├── types.ts    # 跨框架公共契约（唯一事实来源）
+│   │           ├── engine.ts   # 步骤注册表与状态机
+│   │           ├── storage.ts  # 「不再提示」持久化
+│   │           ├── style.ts    # 共享 CSS 与注入
+│   │           └── dom/
+│   │               ├── cutout.ts   # 挖孔几何与浮层定位（纯函数）
+│   │               └── rect.ts     # DOM 矩形测量与变化追踪
 │   ├── vue/             # @kpro/vue   —— Vue 3 适配层
 │   └── react/           # @kpro/react —— React 18 适配层
 ├── examples/

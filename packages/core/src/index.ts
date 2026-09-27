@@ -18,7 +18,7 @@ export {
   type GuideStepProps,
   type Rect,
   type Size,
-} from './types';
+} from './guide/types';
 
 export {
   clearDismissedGuides,
@@ -29,7 +29,7 @@ export {
   isGuideDismissed,
   restoreGuide,
   type GuideConfig,
-} from './storage';
+} from './guide/storage';
 
 export {
   createController,
@@ -49,7 +49,7 @@ export {
   subscribe,
   subscribeEvent,
   unregisterStep,
-} from './engine';
+} from './guide/engine';
 
 export {
   computeCutoutRects,
@@ -62,7 +62,7 @@ export {
   VIEWPORT_MARGIN,
   type OverlayLayout,
   type OverlayLayoutInput,
-} from './dom/cutout';
+} from './guide/dom/cutout';
 
 export {
   getElementRect,
@@ -70,8 +70,8 @@ export {
   isRectFullyVisible,
   observeElement,
   scrollIntoViewIfNeeded,
-} from './dom/rect';
+} from './guide/dom/rect';
 
-export { GUIDE_CSS, injectStyles, STYLE_ELEMENT_ID } from './style';
+export { GUIDE_CSS, injectStyles, STYLE_ELEMENT_ID } from './guide/style';
 
-export type { GuideStorageAdapter } from './types.internal';
+export type { GuideStorageAdapter } from './guide/types.internal';
